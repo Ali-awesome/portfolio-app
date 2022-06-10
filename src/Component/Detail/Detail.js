@@ -1,4 +1,5 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGitAlt, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLink, faServer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -43,9 +44,9 @@ const Detail = () => {
                             <li>{project?.cmnt4}</li>
                             <li>{project?.cmnt5}</li>
                         </ul>
-                        <a className='flex flex-col md:flex-row mb-3' href={project?.client} target="_blank"><FontAwesomeIcon className='h-7 w-7 mr-2' icon={faGithub}></FontAwesomeIcon>Github Client</a>
-                        <a className='flex flex-col md:flex-row mb-3' href={project?.server} target="_blank"><FontAwesomeIcon className='h-7 w-7 mr-2' icon={faGithub}></FontAwesomeIcon>Github Server</a>
-                        <a className='flex flex-col md:flex-row mb-3' href={project?.live} target="_blank"><FontAwesomeIcon className='h-7 w-7 mr-2' icon={faGithub}></FontAwesomeIcon>Live Link</a>
+                        <a className='flex flex-col md:flex-row mb-3 mt-3' href={project?.client} target="_blank"><FontAwesomeIcon className='h-7 w-7 mr-2' icon={faGitAlt}></FontAwesomeIcon>Client-Side Code</a>
+                        <a className='flex flex-col md:flex-row mb-3' href={project?.server} target="_blank"><FontAwesomeIcon className='h-7 w-7 mr-2' icon={faServer}></FontAwesomeIcon>Server-Side Code</a>
+                        <a className='flex flex-col md:flex-row mb-3' href={project?.live} target="_blank"><FontAwesomeIcon className='h-7 w-7 mr-2' icon={faLink}></FontAwesomeIcon>Live Link</a>
                     </div>
                 </div>
             </div>
