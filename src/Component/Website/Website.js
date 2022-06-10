@@ -1,6 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Detail from '../Detail/Detail';
 import useProjects from '../Hooks/useProjects';
 import './Website.css';
 import { Link } from 'react-router-dom';
@@ -8,13 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Website = () => {
     const [projects, setProjects] = useProjects();
-    const navigate = useNavigate();
-    // console.log(projects[0]);
-    const handleClick = () => {
-        // <Detail project={projects[i]}></Detail>
-        // console.log(projects[i]);
-        navigate('/detail')
-    }
+
     return (
         <div className='text-white py-3 '>
             < h1 className="text-5xl text-left ml-24 mt-10" > Featured Works</h1 >

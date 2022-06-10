@@ -5,7 +5,7 @@ const useProjects = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch('projects.json')
+        fetch('https://raw.githubusercontent.com/Ali-awesome/portfolio-app/master/public/projects.json')
             .then(res => res.json())
             .then(data => setProjects(data));
     }, []);
